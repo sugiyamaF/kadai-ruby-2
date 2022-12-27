@@ -1,16 +1,16 @@
 num_max = 100
 def fizzbuzz(num)
-    (1..num).each do |number|
-    if number % 3 == 0 && number % 5 == 0
-      puts "FizzBuzz"
-    elsif number % 3 == 0
-      puts "Fizz"
-    elsif number % 5 == 0
-      puts "Buzz"
-    else 
-      puts number.to_s
-    end
+  if num % 3 == 0 && num % 5 == 0
+    return "FizzBuzz"
+  elsif num % 3 == 0
+    return "Fizz"
+  elsif num % 5 == 0
+    return "Buzz"
+  else 
+    num
   end
 end
 
-fizzbuzz(num_max)
+(1..num_max).each do |num|
+  puts fizzbuzz(num)
+end
